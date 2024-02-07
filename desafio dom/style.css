@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+#input-container{
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#input-container > input{
+    width: 100%;
+}
+
+#data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+ul>li {
+    color: #000;
+    font-weight: 700;
+    background-color: red;
+}
+
+button {
+    border: solid 1px #000;
+    border-radius: 5px;
+    width: 60px;
+    padding: 5px 0;
+    background-color: #f2f2f2;
+    transition: .5s ease-in-out;
+}
+
+button:hover {
+    background-color: #202020;
+    color: #fff
+}
