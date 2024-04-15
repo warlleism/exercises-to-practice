@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="input">
+    </form>
+
+    <script>
+
+        function debounce(func, delay) {
+            let timer;
+            return function () {
+                const context = this;
+                const args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    func.apply(context, args)
+                }, delay)
+            }
+        }
+
+        const input = document.querySelector('#input')
+
+        const debounceLog = debounce(() => {
+            console.log("Busca: ", input.value)
+        }, 500)
+
+        input.addEventListener('keydown', debounceLog);
+
+    </script>
+
+</body>
+
+</html>

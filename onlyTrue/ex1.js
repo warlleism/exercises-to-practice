@@ -8,7 +8,6 @@ const obj = [
 const filter = obj.filter((obj) => Object.values(obj).filter(Boolean).length === 3)
 console.log(filter)
 
-
 const result = obj.filter((item) => {
     const values = Object.values(item);
     return values.length === 3 && values.every(Boolean);
